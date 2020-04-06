@@ -42,7 +42,7 @@ function GetFaucet() {
         request.post({
             headers: {'content-type' : 'application/rawdata'},
             url:     'https://faucet.metamask.io/',
-            body:    "0x91267FF592f389a3447499783D5BD05F36ae1400"
+            body:    publicKey.toString()
         }, function(error, response, body){
             if (body == "Too many requests, please try again later.")
             {
